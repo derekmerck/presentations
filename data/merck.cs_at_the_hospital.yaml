@@ -1,0 +1,419 @@
+author: Derek Merck, PhD
+date: February 26, 2019
+title: CS at the Hospital
+
+background:
+  file:
+    solarized: big_board_bglite.png
+    simple:    big_board_bglite.png
+    white:     big_board_bglite.png
+    black:     big_board_bgdark.png
+    night:     big_board_bgdark.png
+  im_size: [5022, 2250]
+  im_parallax: true
+
+intro:
+  title: About Me
+  content: |-
+    * some stuff about me
+    * some other stuff about me
+  image: merck_3d_face_capture.jpg
+
+agenda:
+  title: Agenda
+  content: |-
+    1. Interesting clinical problem domains
+    2. Classical clinical skills, tools, systems, formats for 
+       "low complexity" problems
+    3. Applying modern scientific skills, tools, systems, formats
+       to handle increasing complexity
+    4. The CIRR and DIANA
+
+follow_up:
+  title: Project Complexity
+  content: |-
+    [![Project Complexity][plt_img]][plt_link]
+
+    [plt_link]: https://plot.ly/~derek_merck/7/?share_key=i9GSewCIDIaS2Bry96DwRb
+    [plt_img]: https://plot.ly/~derek_merck/7.png?share_key=i9GSewCIDIaS2Bry96DwRb
+
+
+content:
+
+  ## ARTP
+  - title: ARTP
+    title_modifier: 36 CT Studies
+
+    children:
+    - title: Overview
+      content: |-
+        Pizer, Chaney, Rosenman, Tracton, others
+
+        Optimize treatment outcomes by adapting radiotherapy treatment to patient anatomic shape change
+      image: pablo.png
+
+    - title: Inputs
+      content: |-
+        * 12 patients undergoing fractionated radiotherapy for prostate cancer
+        * Each imaged 3 times over the course of their treatment
+
+    - title: Techniques
+      content: |-
+        * Image registration (rigid, deformable)
+        * Anatomic segmentation
+        * Volumetry and shape stats
+        * Surface and volume visualization
+
+    - title: Tools
+      content: |-
+        * Hand made in C++ and Matlab
+      image: 3dpvt.jpg
+
+    - title: Considerations
+      content: |-
+        > 2005: “In the fullness of time, Dr. X will completely segment the anatomic structures in all 36 of these studies…”
+
+        > 2009:  “… although somewhat limited by the 6 segmented cases we have available…”
+
+    - title: Results
+      content: |-
+        * Methodological improvements
+        * $n = 36$, $t = 700$ (2 years), $n/t = 0.05$
+
+  ## PMTA
+  - title: PMTA
+    title_modifier: 20 CT Studies
+
+    children:
+      - title: Overview
+        content: |-
+          * Dupuy, Healey, Collins
+          * Compare anatomic models from before and after minimally invasive microwave thermal ablation cancer treatment to deduce likelihood of recurrence
+        image: CTARN.png
+
+      - title: Inputs
+        content: |-
+          * Started with about 20 cases
+          * Sub-optimal data collection
+          * _Ad hoc_ processing
+
+      - title: Techniques
+        content: |-
+          * Image registration (rigid, deformable)
+          * Anatomic segmentation
+          * Volumetry and shape stats
+          * Statistical classifiers
+
+          ![](images/collins_metric.png){.stretch}
+
+      - title: Tools
+        content: |-
+          * Hand made in C++, Matlab, Python
+          * Clinical tools like GE AWS and Terarecon
+          * 3D Slicer (NAMIC)
+
+      - title: Considerations
+        content: |-
+          * Hand crafting anatomic models requires significant domain expertise
+          * Required imaging may not be collected at all, or is routinely discarded b/c it lacks clinical relevance
+          * Change protocols to curate data properly
+          * Anticipate future needs and store high resolution studies somewhere
+
+      - title: Results
+        content: |-
+          * Currently about 200 cases, consistent RT data collection and processing, works for multiple anatomic domains
+          * _Very good_ early predictive accuracy (>90% 3-6 months before recurrence), novel
+          * Significant methodlogical improvements in biothermal modeling
+        image: gd_defense.jpg
+
+      - title: Results
+        content: |-
+          * The Clinical Image Research Registry (the CIRR) at RIH is established
+          * Why not use “modern ai”?   Around 3 cases/week — how long to get to 14M studies, like ImageNet?
+          * $n = 300$, $t = 1800$(5 years), $n/t = 0.17$
+
+  ## 3D Review
+  - title: 3D Review
+    title_modifier: 4 CT and MR Studies
+
+    children:
+      - title: Overview
+        content: |-
+          * Kobayashi, Luks, Woo, Collins, Knorlein, Guang, Huang
+          * Individualized workups and presentations for specific data exploration tasks
+
+      - title: Inputs
+        content: |-
+          * Selected studies of particular interest
+          * Targeted presentation formats
+        image: ibis.png
+        wide_image: true
+
+      - title: Techniques
+        content: |-
+          * Image registration (rigid, deformable)
+          * Anatomic segmentation
+          * Surface and volume geometry, processing, formats
+          * Tracking, stereo and haptic rendering
+          * 3D printing techniques
+        image: yurt.jpg
+
+      - title: Tools
+        content: |-
+          * Meshlab
+          * Oculus
+          * Hololens
+          * The Brown “YURT”
+          * Phantom
+          * Range of 3D printing systems
+        image: viper.jpg
+        wide_image: true
+
+      - title: Considerations
+        content: |-
+          * Is high resolution data available or has it been lost?
+          * Workups are very specific and require significant anatomic and technical expertises
+
+      - title: Results
+        content: |-
+          * Procedure pre-planning (AR/VR walk throughs)
+          * Virtual biopsy (hololens and phantom virtual biopsy)
+          * Teaching artifacts (spinabifida)
+          * Simulators (arterial selection)
+          * Some data is public
+          * $n = 20$, $t = 1800$ (5 years), $n/t = 0.01$
+        image: fetal_3d.jpg
+        image_caption: Fetal spinabifada 3D printed model
+
+  ## MUSTACHE
+  - title: MUSTACHE
+    title_modifier: 300 USBx Studies with Path
+
+    children:
+      - title: Overview
+        content: |-
+          * Beland, Wu, Tuomi
+          * Predict pathology findings of liver disease from ultrasound biopsy images
+
+      - title: Inputs
+        content: |-
+          * A summer of click-by-click data curation and transcribing path reports on pdf
+
+      - title: Techniques
+        content: |-
+          * Texture analysis
+          * Statistical classifiers
+        image: mustache_textures.png
+        wide_image: true
+
+      - title: Tools
+        content: |-
+          * Hand made in Matlab
+
+          ![](images/steatosis600.png){.stretch}
+
+      - title: Results
+        content: |-
+          * Decent predictive accuracy at the time (>70%), novel
+          * First project that curates more than 1 study/day
+          * Data is public (or will be soon)
+          * $n = 300$, $t = 120$ (4 months), $n/t = 2.5$
+        image: 20150410_165706.jpg
+        im_caption: Wu winning an Xbox at the Brown undergrad research symposium
+
+  ## Dose Review
+  - title: Dose Review
+    title_modifier: 150 SR from CT Studies
+
+    children:
+      - title: Overview
+        content: |-
+          * Collins
+          * Evaluate ACR finding that certain pediatric studies at RIH use more radiation than the national average.
+
+      - title: Inputs
+        content: |-
+          * About 150 candidate dose reports from certain pediatric studies performed in a specific time range
+
+      - title: Techniques
+        content: |-
+          * How do you access dose reports, which are not visible in the clinical systems?
+          * How do you interpret the daa in a DICOM dose report once you have it?
+
+      - title: Tools
+        content: |-
+          * Manual PACS review
+          * Osirix/Horos
+
+      - title: Results
+        content: |-
+          * Unable to reproduce ACR summary values, conclude that their values were improperly computed
+          * All dose data is routed to the CIRR for future review, DIANA, our DICOM analytics package is born
+          * $n = 150$, $t = 7$ (1 week), $n/t = 21.42$
+
+  ## ProTECT3D
+  - title: ProTECT3D
+    title_modifier: 2000 CT/MR Studies, trial data
+
+    children:
+      - title: Overview
+        content: |-
+          * Wright, Lunny, L Merck, Keshava-Murthy, Pan
+          * Study impact of TBI treatment
+
+      - title: Inputs
+        content: |-
+          * 600 patients
+          * Approx 3 studies each (enrollment, intervention, follow up)
+
+      - title: Techniques
+        content: |-
+          * Anatomic segmentation
+          * SIFT
+          * Convolutional Neural Networks
+        image: tm.png
+
+      - title: Results
+        content: |-
+          * Very good predictive accuracy (>90%)
+          * First application of "modern" ML
+          * $n = 2800$, $t = 365$ (9 months), $n/t = 6.8$
+        image: knkm-protect3.png
+        wide_image: true
+
+  ## Bone Age
+  - title: Bone Age
+    title_modifier: 2000 CR Studies
+
+    children:
+      - title: Overview
+        content: |-
+          * Pan
+          * Estimate skeletal developmental age from data, rather than using the classical model in Gruelich and Pyle
+        image: BoneAgeHeatMap.png
+
+      - title: Results
+        content: |-
+          * Using RSNA data set: XX% (4th place)
+          * Using RIH data set: XX%
+          * DIANA can do retrospective pulls
+          * $n = 2000$, $t = 60$ (2 months), $n/t = 34.01$
+        image: IMG_4468.jpg
+
+      - title: Considerations
+        content: |-
+          * This is a common task and a solved problem; so how do we put this back into the clinical pipeline?
+        image: rih3d-ba.png
+
+  - title: MamBx
+    title_modifier: 2500 USBx/MRBx Studies with Path
+
+    children:
+      - title: Overview
+        content: |-
+          * Lourenco, Pan, Chu
+          * Breast cancer detection
+
+      - title: Results
+        content: |-
+          * Doing this routinely now, >80% accuracy
+          * $n = 2500$, $t = 90$ (3 months), $n/t = 28.3$
+
+  - title: MochiNet
+    title_modifier: 17,000 CR Studies
+
+    children:
+      - title: Overview
+        content: |-
+          * Pan
+          * Pneumonia and other pathology detection from X-ray using a low parameter CNN suitable for mobile devices
+
+      - title: Results
+        content: |-
+          * Using RSNA/NIH data set: XX% (1st place)
+          * Using RIH data set: XX%
+          * $n = 17000$, $t = 14$ (2 weeks), $n/t = 1214.2$
+        image: mochinet.png
+        wide_image: true
+
+  - title:  SIREN
+    title_modifier: 2000 CT/MR Studies, trial data, 18 sites
+
+    children:
+      - title: Overview
+        content: |-
+          - Barsan, Silbergleit, L Merck
+          - Digital central data colleciton for national stroke clinical trial network
+
+      - title: Considerations
+        content: |-
+          - Cohort discovery — query data warehouse vs self serve
+          - Scalable system to support 10k studies from 60 sites
+          - Support on-site data collection
+          - Security
+
+      - title: Results
+        content: |-
+          - Years in and still "in progress"
+          - Embedded DIANA is born
+
+  - title: Thyroid USBx
+    title_modifier: 800 USBx Studies with Path, trial data
+
+    children:
+      - title: Overview
+        content: |-
+          * Middleton, Beland, Pan
+          * Thyroid cancer staging from national trial data
+
+      - title: Results
+        content: |-
+          * Routine, >80% accuracy
+          * $n = 800$, $t = 14$ (2 weeks), $n/t = 57.14$
+
+  - title: Dose Monitoring
+    title_modifier: 60,000 SR from CT, XA, NM
+
+    children:
+      - title: Overview
+        content: |-
+          * Collins
+          * Dose data, 2 years continuous real-time data collection, outlier detection
+          * Despite ITs best efforts to destroy it
+
+  - title: Report Priority
+    title_modifier: 500,000 Reports
+
+    children:
+      - title: Overview
+        content: |-
+          * Movson, Langlotz, Zhang, Pan
+          * NLP priority estimation
+
+      - title: Considerations
+        content: |-
+          * Our rads have been priority scoring reports for over a year, incredibly valuable "ground truth"
+
+      - title: Results
+        content: |-
+          * >90% accuracy
+
+  - title: Automatic Reporting
+    title_modifier: 2.5M CR Studies with Reports, 2 sites
+
+    children:
+      - title: Overview
+        content: |-
+          * Movson, Langlotz, Zhang, Pan
+          * Automatic report generation from image features
+          * Full circle -- Informally called our "medical imagenet"
+
+      - title: Considerations
+        content: |-
+          * DIANA 3wks in of 24x7 data processing: 125k studies = 5%
+          * We are back to *months* of data collection
+
+
+
+
+

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Derek Merck, PhD">
+  <meta name="dcterms.date" content="2019-02-26">
+  <title>CS at the Hospital</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="https://revealjs.com/css/theme/night.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://revealjs.com/css/print/pdf.css' : 'https://revealjs.com/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">CS at the Hospital</h1>
+  <p class="author">Derek Merck, PhD</p>
+  <p class="date">February 26, 2019</p>
+</section>
+
+<section class="slide level3">
+
+<style>
+div.column {
+  font-size: smaller;
+  vertical-align: middle;
+}
+div.fig {
+  width: 100%;
+  height: 80%;
+  font-size: smaller;
+}
+.reveal figure {
+  height: 100%;
+  width: 100%;
+}
+.reveal figure img {
+  max-height: 80%;
+  width: auto;
+}
+
+</style>
+</section>
+<section id="about-me" class="slide level3">
+<h3>About Me</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>some stuff about me</li>
+<li>some other stuff about me</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<p><img data-src="images/merck_3d_face_capture.jpg" /></p>
+</div>
+</div>
+</div>
+</section>
+<section id="agenda" class="slide level3">
+<h3>Agenda</h3>
+<ol type="1">
+<li>Interesting clinical problem domains</li>
+<li>Classical clinical skills, tools, systems, formats for “low complexity” problems</li>
+<li>Applying modern scientific skills, tools, systems, formats to handle increasing complexity</li>
+<li>The CIRR and DIANA</li>
+</ol>
+</section>
+<section><section id="artp---36-ct-studies" class="title-slide slide level2"><h2>ARTP - 36 CT Studies</h2></section><section id="artp---overview" class="slide level3">
+<h3>ARTP - Overview</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>Pizer, Chaney, Rosenman, Tracton, others</p>
+<p>Optimize treatment outcomes by adapting radiotherapy treatment to patient anatomic shape change</p>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<p><img data-src="images/pablo.png" /></p>
+</div>
+</div>
+</div>
+</section><section id="artp---inputs" class="slide level3">
+<h3>ARTP - Inputs</h3>
+<ul>
+<li>12 patients undergoing fractionated radiotherapy for prostate cancer</li>
+<li>Each imaged 3 times over the course of their treatment</li>
+</ul>
+</section><section id="artp---techniques" class="slide level3">
+<h3>ARTP - Techniques</h3>
+<ul>
+<li>Image registration (rigid, deformable)</li>
+<li>Anatomic segmentation</li>
+<li>Volumetry and shape stats</li>
+<li>Surface and volume visualization</li>
+</ul>
+</section><section id="artp---tools" class="slide level3">
+<h3>ARTP - Tools</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Hand made in C++ and Matlab</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<p><img data-src="images/3dpvt.jpg" /></p>
+</div>
+</div>
+</div>
+</section><section id="artp---considerations" class="slide level3">
+<h3>ARTP - Considerations</h3>
+<blockquote>
+<p>2005: “In the fullness of time, Dr. X will completely segment the anatomic structures in all 36 of these studies…”</p>
+</blockquote>
+<blockquote>
+<p>2009: “… although somewhat limited by the 6 segmented cases we have available…”</p>
+</blockquote>
+</section><section id="artp---results" class="slide level3">
+<h3>ARTP - Results</h3>
+<ul>
+<li>Methodological improvements</li>
+<li><span class="math inline"><em>n</em> = 36</span>, <span class="math inline"><em>t</em> = 700</span> (2 years), <span class="math inline"><em>n</em>/<em>t</em> = 0.05</span></li>
+</ul>
+</section></section>
+<section><section id="pmta---20-ct-studies" class="title-slide slide level2"><h2>PMTA - 20 CT Studies</h2></section><section id="pmta---overview" class="slide level3">
+<h3>PMTA - Overview</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Dupuy, Healey, Collins</li>
+<li>Compare anatomic models from before and after minimally invasive microwave thermal ablation cancer treatment to deduce likelihood of recurrence</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<p><img data-src="images/CTARN.png" /></p>
+</div>
+</div>
+</div>
+</section><section id="pmta---inputs" class="slide level3">
+<h3>PMTA - Inputs</h3>
+<ul>
+<li>Started with about 20 cases</li>
+<li>Sub-optimal data collection</li>
+<li><em>Ad hoc</em> processing</li>
+</ul>
+</section><section id="pmta---techniques" class="slide level3">
+<h3>PMTA - Techniques</h3>
+<ul>
+<li>Image registration (rigid, deformable)</li>
+<li>Anatomic segmentation</li>
+<li>Volumetry and shape stats</li>
+<li>Statistical classifiers</li>
+</ul>
+<img data-src="images/collins_metric.png" class="stretch" />
+</section><section id="pmta---tools" class="slide level3">
+<h3>PMTA - Tools</h3>
+<ul>
+<li>Hand made in C++, Matlab, Python</li>
+<li>Clinical tools like GE AWS and Terarecon</li>
+<li>3D Slicer (NAMIC)</li>
+</ul>
+</section><section id="pmta---considerations" class="slide level3">
+<h3>PMTA - Considerations</h3>
+<ul>
+<li>Hand crafting anatomic models requires significant domain expertise</li>
+<li>Required imaging may not be collected at all, or is routinely discarded b/c it lacks clinical relevance</li>
+<li>Change protocols to curate data properly</li>
+<li>Anticipate future needs and store high resolution studies somewhere</li>
+</ul>
+</section><section id="pmta---results" class="slide level3">
+<h3>PMTA - Results</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Currently about 200 cases, consistent RT data collection and processing, works for multiple anatomic domains</li>
+<li><em>Very good</em> early predictive accuracy (&gt;90% 3-6 months before recurrence), novel</li>
+<li>Significant methodlogical improvements in biothermal modeling</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<p><img data-src="images/gd_defense.jpg" /></p>
+</div>
+</div>
+</div>
+</section><section id="pmta---results-1" class="slide level3">
+<h3>PMTA - Results</h3>
+<ul>
+<li>The Clinical Image Research Registry (the CIRR) at RIH is established</li>
+<li>Why not use “modern ai”? Around 3 cases/week — how long to get to 14M studies, like ImageNet?</li>
+<li><span class="math inline"><em>n</em> = 300</span>, <span class="math inline"><em>t</em> = 1800</span>(5 years), <span class="math inline"><em>n</em>/<em>t</em> = 0.17</span></li>
+</ul>
+</section></section>
+<section><section id="d-review---4-ct-and-mr-studies" class="title-slide slide level2"><h2>3D Review - 4 CT and MR Studies</h2></section><section id="d-review---overview" class="slide level3">
+<h3>3D Review - Overview</h3>
+<ul>
+<li>Kobayashi, Luks, Woo, Collins, Knorlein, Guang, Huang</li>
+<li>Individualized workups and presentations for specific data exploration tasks</li>
+</ul>
+</section><section id="d-review---inputs" class="slide level3">
+<h3>3D Review - Inputs</h3>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Selected studies of particular interest</li>
+<li>Targeted presentation formats</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="fig">
+<p><img data-src="images/ibis.png" /></p>
+</div>
+</div>
+</div>
+</section><section id="d-review---techniques" class="slide level3">
+<h3>3D Review - Techniques</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Image registration (rigid, deformable)</li>
+<li>Anatomic segmentation</li>
+<li>Surface and volume geometry, processing, formats</li>
+<li>Tracking, stereo and haptic rendering</li>
+<li>3D printing techniques</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<p><img data-src="images/yurt.jpg" /></p>
+</div>
+</div>
+</div>
+</section><section id="d-review---tools" class="slide level3">
+<h3>3D Review - Tools</h3>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Meshlab</li>
+<li>Oculus</li>
+<li>Hololens</li>
+<li>The Brown “YURT”</li>
+<li>Phantom</li>
+<li>Range of 3D printing systems</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="fig">
+<p><img data-src="images/viper.jpg" /></p>
+</div>
+</div>
+</div>
+</section><section id="d-review---considerations" class="slide level3">
+<h3>3D Review - Considerations</h3>
+<ul>
+<li>Is high resolution data available or has it been lost?</li>
+<li>Workups are very specific and require significant anatomic and technical expertises</li>
+</ul>
+</section><section id="d-review---results" class="slide level3">
+<h3>3D Review - Results</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Procedure pre-planning (AR/VR walk throughs)</li>
+<li>Virtual biopsy (hololens and phantom virtual biopsy)</li>
+<li>Teaching artifacts (spinabifida)</li>
+<li>Simulators (arterial selection)</li>
+<li>Some data is public</li>
+<li><span class="math inline"><em>n</em> = 20</span>, <span class="math inline"><em>t</em> = 1800</span> (5 years), <span class="math inline"><em>n</em>/<em>t</em> = 0.01</span></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<p><img data-src="images/fetal_3d.jpg" /></p>
+</div>
+</div>
+</div>
+</section></section>
+<section><section id="mustache---300-usbx-studies-with-path" class="title-slide slide level2"><h2>MUSTACHE - 300 USBx Studies with Path</h2></section><section id="mustache---overview" class="slide level3">
+<h3>MUSTACHE - Overview</h3>
+<ul>
+<li>Beland, Wu, Tuomi</li>
+<li>Predict pathology findings of liver disease from ultrasound biopsy images</li>
+</ul>
+</section><section id="mustache---inputs" class="slide level3">
+<h3>MUSTACHE - Inputs</h3>
+<ul>
+<li>A summer of click-by-click data curation and transcribing path reports on pdf</li>
+</ul>
+</section><section id="mustache---techniques" class="slide level3">
+<h3>MUSTACHE - Techniques</h3>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Texture analysis</li>
+<li>Statistical classifiers</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="fig">
+<p><img data-src="images/mustache_textures.png" /></p>
+</div>
+</div>
+</div>
+</section><section id="mustache---tools" class="slide level3">
+<h3>MUSTACHE - Tools</h3>
+<ul>
+<li>Hand made in Matlab</li>
+</ul>
+<img data-src="images/steatosis600.png" class="stretch" />
+</section><section id="mustache---results" class="slide level3">
+<h3>MUSTACHE - Results</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Decent predictive accuracy at the time (&gt;70%), novel</li>
+<li>First project that curates more than 1 study/day</li>
+<li>Data is public (or will be soon)</li>
+<li><span class="math inline"><em>n</em> = 300</span>, <span class="math inline"><em>t</em> = 120</span> (4 months), <span class="math inline"><em>n</em>/<em>t</em> = 2.5</span></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<figure>
+<img data-src="images/20150410_165706.jpg" alt="Wu winning an Xbox at the Brown undergrad research symposium" /><figcaption>Wu winning an Xbox at the Brown undergrad research symposium</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section></section>
+<section><section id="dose-review---150-sr-from-ct-studies" class="title-slide slide level2"><h2>Dose Review - 150 SR from CT Studies</h2></section><section id="dose-review---overview" class="slide level3">
+<h3>Dose Review - Overview</h3>
+<ul>
+<li>Collins</li>
+<li>Evaluate ACR finding that certain pediatric studies at RIH use more radiation than the national average.</li>
+</ul>
+</section><section id="dose-review---inputs" class="slide level3">
+<h3>Dose Review - Inputs</h3>
+<ul>
+<li>About 150 candidate dose reports from certain pediatric studies performed in a specific time range</li>
+</ul>
+</section><section id="dose-review---techniques" class="slide level3">
+<h3>Dose Review - Techniques</h3>
+<ul>
+<li>How do you access dose reports, which are not visible in the clinical systems?</li>
+<li>How do you interpret the daa in a DICOM dose report once you have it?</li>
+</ul>
+</section><section id="dose-review---tools" class="slide level3">
+<h3>Dose Review - Tools</h3>
+<ul>
+<li>Manual PACS review</li>
+<li>Osirix/Horos</li>
+</ul>
+</section><section id="dose-review---results" class="slide level3">
+<h3>Dose Review - Results</h3>
+<ul>
+<li>Unable to reproduce ACR summary values, conclude that their values were improperly computed</li>
+<li>All dose data is routed to the CIRR for future review, DIANA, our DICOM analytics package is born</li>
+<li><span class="math inline"><em>n</em> = 150</span>, <span class="math inline"><em>t</em> = 7</span> (1 week), <span class="math inline"><em>n</em>/<em>t</em> = 21.42</span></li>
+</ul>
+</section></section>
+<section><section id="protect3d---2000-ctmr-studies-trial-data" class="title-slide slide level2"><h2>ProTECT3D - 2000 CT/MR Studies, trial data</h2></section><section id="protect3d---overview" class="slide level3">
+<h3>ProTECT3D - Overview</h3>
+<ul>
+<li>Wright, Lunny, L Merck, Keshava-Murthy, Pan</li>
+<li>Study impact of TBI treatment</li>
+</ul>
+</section><section id="protect3d---inputs" class="slide level3">
+<h3>ProTECT3D - Inputs</h3>
+<ul>
+<li>600 patients</li>
+<li>Approx 3 studies each (enrollment, intervention, follow up)</li>
+</ul>
+</section><section id="protect3d---techniques" class="slide level3">
+<h3>ProTECT3D - Techniques</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Anatomic segmentation</li>
+<li>SIFT</li>
+<li>Convolutional Neural Networks</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<p><img data-src="images/tm.png" /></p>
+</div>
+</div>
+</div>
+</section><section id="protect3d---results" class="slide level3">
+<h3>ProTECT3D - Results</h3>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Very good predictive accuracy (&gt;90%)</li>
+<li>First application of “modern” ML</li>
+<li><span class="math inline"><em>n</em> = 2800</span>, <span class="math inline"><em>t</em> = 365</span> (9 months), <span class="math inline"><em>n</em>/<em>t</em> = 6.8</span></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="fig">
+<p><img data-src="images/knkm-protect3.png" /></p>
+</div>
+</div>
+</div>
+</section></section>
+<section><section id="bone-age---2000-cr-studies" class="title-slide slide level2"><h2>Bone Age - 2000 CR Studies</h2></section><section id="bone-age---overview" class="slide level3">
+<h3>Bone Age - Overview</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Pan</li>
+<li>Estimate skeletal developmental age from data, rather than using the classical model in Gruelich and Pyle</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<p><img data-src="images/BoneAgeHeatMap.png" /></p>
+</div>
+</div>
+</div>
+</section><section id="bone-age---results" class="slide level3">
+<h3>Bone Age - Results</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Using RSNA data set: XX% (4th place)</li>
+<li>Using RIH data set: XX%</li>
+<li>DIANA can do retrospective pulls</li>
+<li><span class="math inline"><em>n</em> = 2000</span>, <span class="math inline"><em>t</em> = 60</span> (2 months), <span class="math inline"><em>n</em>/<em>t</em> = 34.01</span></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<p><img data-src="images/IMG_4468.jpg" /></p>
+</div>
+</div>
+</div>
+</section><section id="bone-age---considerations" class="slide level3">
+<h3>Bone Age - Considerations</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>This is a common task and a solved problem; so how do we put this back into the clinical pipeline?</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<p><img data-src="images/rih3d-ba.png" /></p>
+</div>
+</div>
+</div>
+</section></section>
+<section><section id="mambx---2500-usbxmrbx-studies-with-path" class="title-slide slide level2"><h2>MamBx - 2500 USBx/MRBx Studies with Path</h2></section><section id="mambx---overview" class="slide level3">
+<h3>MamBx - Overview</h3>
+<ul>
+<li>Lourenco, Pan, Chu</li>
+<li>Breast cancer detection</li>
+</ul>
+</section><section id="mambx---results" class="slide level3">
+<h3>MamBx - Results</h3>
+<ul>
+<li>Doing this routinely now, &gt;80% accuracy</li>
+<li><span class="math inline"><em>n</em> = 2500</span>, <span class="math inline"><em>t</em> = 90</span> (3 months), <span class="math inline"><em>n</em>/<em>t</em> = 28.3</span></li>
+</ul>
+</section></section>
+<section><section id="mochinet---17000-cr-studies" class="title-slide slide level2"><h2>MochiNet - 17,000 CR Studies</h2></section><section id="mochinet---overview" class="slide level3">
+<h3>MochiNet - Overview</h3>
+<ul>
+<li>Pan</li>
+<li>Pneumonia and other pathology detection from X-ray using a low parameter CNN suitable for mobile devices</li>
+</ul>
+</section><section id="mochinet---results" class="slide level3">
+<h3>MochiNet - Results</h3>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Using RSNA/NIH data set: XX% (1st place)</li>
+<li>Using RIH data set: XX%</li>
+<li><span class="math inline"><em>n</em> = 17000</span>, <span class="math inline"><em>t</em> = 14</span> (2 weeks), <span class="math inline"><em>n</em>/<em>t</em> = 1214.2</span></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="fig">
+<p><img data-src="images/mochinet.png" /></p>
+</div>
+</div>
+</div>
+</section></section>
+<section><section id="siren---2000-ctmr-studies-trial-data-18-sites" class="title-slide slide level2"><h2>SIREN - 2000 CT/MR Studies, trial data, 18 sites</h2></section><section id="siren---overview" class="slide level3">
+<h3>SIREN - Overview</h3>
+<ul>
+<li>Barsan, Silbergleit, L Merck</li>
+<li>Digital central data colleciton for national stroke clinical trial network</li>
+</ul>
+</section><section id="siren---considerations" class="slide level3">
+<h3>SIREN - Considerations</h3>
+<ul>
+<li>Cohort discovery — query data warehouse vs self serve</li>
+<li>Scalable system to support 10k studies from 60 sites</li>
+<li>Support on-site data collection</li>
+<li>Security</li>
+</ul>
+</section><section id="siren---results" class="slide level3">
+<h3>SIREN - Results</h3>
+<ul>
+<li>Years in and still “in progress”</li>
+<li>Embedded DIANA is born</li>
+</ul>
+</section></section>
+<section><section id="thyroid-usbx---800-usbx-studies-with-path-trial-data" class="title-slide slide level2"><h2>Thyroid USBx - 800 USBx Studies with Path, trial data</h2></section><section id="thyroid-usbx---overview" class="slide level3">
+<h3>Thyroid USBx - Overview</h3>
+<ul>
+<li>Middleton, Beland, Pan</li>
+<li>Thyroid cancer staging from national trial data</li>
+</ul>
+</section><section id="thyroid-usbx---results" class="slide level3">
+<h3>Thyroid USBx - Results</h3>
+<ul>
+<li>Routine, &gt;80% accuracy</li>
+<li><span class="math inline"><em>n</em> = 800</span>, <span class="math inline"><em>t</em> = 14</span> (2 weeks), <span class="math inline"><em>n</em>/<em>t</em> = 57.14</span></li>
+</ul>
+</section></section>
+<section><section id="dose-monitoring---60000-sr-from-ct-xa-nm" class="title-slide slide level2"><h2>Dose Monitoring - 60,000 SR from CT, XA, NM</h2></section><section id="dose-monitoring---overview" class="slide level3">
+<h3>Dose Monitoring - Overview</h3>
+<ul>
+<li>Collins</li>
+<li>Dose data, 2 years continuous real-time data collection, outlier detection</li>
+<li>Despite ITs best efforts to destroy it</li>
+</ul>
+</section></section>
+<section><section id="report-priority---500000-reports" class="title-slide slide level2"><h2>Report Priority - 500,000 Reports</h2></section><section id="report-priority---overview" class="slide level3">
+<h3>Report Priority - Overview</h3>
+<ul>
+<li>Movson, Langlotz, Zhang, Pan</li>
+<li>NLP priority estimation</li>
+</ul>
+</section><section id="report-priority---considerations" class="slide level3">
+<h3>Report Priority - Considerations</h3>
+<ul>
+<li>Our rads have been priority scoring reports for over a year, incredibly valuable “ground truth”</li>
+</ul>
+</section><section id="report-priority---results" class="slide level3">
+<h3>Report Priority - Results</h3>
+<ul>
+<li><blockquote>
+<p>90% accuracy</p>
+</blockquote></li>
+</ul>
+</section></section>
+<section><section id="automatic-reporting---2.5m-cr-studies-with-reports-2-sites" class="title-slide slide level2"><h2>Automatic Reporting - 2.5M CR Studies with Reports, 2 sites</h2></section><section id="automatic-reporting---overview" class="slide level3">
+<h3>Automatic Reporting - Overview</h3>
+<ul>
+<li>Movson, Langlotz, Zhang, Pan</li>
+<li>Automatic report generation from image features</li>
+<li>Full circle – Informally called our “medical imagenet”</li>
+</ul>
+</section><section id="automatic-reporting---considerations" class="slide level3">
+<h3>Automatic Reporting - Considerations</h3>
+<ul>
+<li>DIANA 3wks in of 24x7 data processing: 125k studies = 5%</li>
+<li>We are back to <em>months</em> of data collection</li>
+</ul>
+</section></section>
+<section><section id="section" class="title-slide slide level2"><h2></h2></section><section id="project-complexity" class="slide level3">
+<h3>Project Complexity</h3>
+<p><a href="https://plot.ly/~derek_merck/7/?share_key=i9GSewCIDIaS2Bry96DwRb"><img data-src="https://plot.ly/~derek_merck/7.png?share_key=i9GSewCIDIaS2Bry96DwRb" alt="Project Complexity" /></a></p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://revealjs.com/lib/js/head.min.js"></script>
+  <script src="https://revealjs.com/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Parallax background image
+        parallaxBackgroundImage: 'images/big_board_bgdark.png', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+        // Parallax background size
+        parallaxBackgroundSize: '5022px 2250px', // CSS syntax, e.g. "2100px 900px"
+        // Amount to move parallax background (horizontal and vertical) on slide change
+        // Number, e.g. 100
+        parallaxBackgroundHorizontal: 358.7142857142857,
+        parallaxBackgroundVertical: 225.0,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
