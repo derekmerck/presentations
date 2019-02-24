@@ -15,11 +15,16 @@ background:
   im_parallax: true
 
 intro:
-  title: About Me
+  title: Who Am I?
   content: |-
-    * some stuff about me
-    * some other stuff about me
-  image: merck_3d_face_capture.jpg
+    * Lit Major at Reed
+    * Multimedia Programmer at CMD
+    * Technical Contractor
+    * Grad Student at UC and UNC
+    * Married to a clinical trialist
+    * Teaching Faculty at CLC and GPC
+    * Research Faculty at RIH Diagnostic Imaging, Radiation-Oncology, Brown Engineering, URI Physics, Tufts CTSI
+  image: mercks.png
 
 agenda:
   title: Agenda
@@ -31,7 +36,7 @@ agenda:
        to handle increasing complexity
     4. The CIRR and DIANA
 
-follow_up:
+overview:
   title: Project Complexity
   content: |-
     [![Project Complexity][plt_img]][plt_link]
@@ -52,7 +57,7 @@ content:
         Pizer, Chaney, Rosenman, Tracton, others
 
         Optimize treatment outcomes by adapting radiotherapy treatment to patient anatomic shape change
-      image: pablo.png
+      image: pablo-mpelvis.png
 
     - title: Inputs
       content: |-
@@ -65,22 +70,26 @@ content:
         * Anatomic segmentation
         * Volumetry and shape stats
         * Surface and volume visualization
+      image: 3dpvt.jpg
 
     - title: Tools
       content: |-
-        * Hand made in C++ and Matlab
-      image: 3dpvt.jpg
+        * Hand made in C
+        * Code base had a 13 year legacy
+        * I convinced them to let me work with C++
 
     - title: Considerations
       content: |-
-        > 2005: “In the fullness of time, Dr. X will completely segment the anatomic structures in all 36 of these studies…”
+        > 2005: "In the fullness of time, Dr. X will completely segment the anatomic structures in all 36 of these studies..."
 
-        > 2009:  “… although somewhat limited by the 6 segmented cases we have available…”
+        > 2009:  "...although somewhat limited by the 6 segmented cases we have available...""
 
     - title: Results
       content: |-
-        * Methodological improvements
+        * Methodological improvements in anatomic representation
         * $n = 36$, $t = 700$ (2 years), $n/t = 0.05$
+      image: pablo-kidney.png
+
 
   ## PMTA
   - title: PMTA
@@ -90,29 +99,27 @@ content:
       - title: Overview
         content: |-
           * Dupuy, Healey, Collins
-          * Compare anatomic models from before and after minimally invasive microwave thermal ablation cancer treatment to deduce likelihood of recurrence
-        image: CTARN.png
+          * Compare anatomic models from before and after microwave thermal ablation cancer treatment to deduce likelihood of recurrence
+        image: IMG_2282.jpg
+        wide_image: true
 
       - title: Inputs
         content: |-
           * Started with about 20 cases
           * Sub-optimal data collection
           * _Ad hoc_ processing
+        image: ablation_2sticks.png
 
       - title: Techniques
         content: |-
+          ::::: condensed
           * Image registration (rigid, deformable)
           * Anatomic segmentation
           * Volumetry and shape stats
           * Statistical classifiers
+          :::::
 
-          ![](images/collins_metric.png){.stretch}
-
-      - title: Tools
-        content: |-
-          * Hand made in C++, Matlab, Python
-          * Clinical tools like GE AWS and Terarecon
-          * 3D Slicer (NAMIC)
+          ![](images/abl_metric.png){.stretch}
 
       - title: Considerations
         content: |-
@@ -123,16 +130,23 @@ content:
 
       - title: Results
         content: |-
+          ::::: condensed
           * Currently about 200 cases, consistent RT data collection and processing, works for multiple anatomic domains
           * _Very good_ early predictive accuracy (>90% 3-6 months before recurrence), novel
-          * Significant methodlogical improvements in biothermal modeling
-        image: gd_defense.jpg
+          :::::
+
+          ![](images/abl_metric_summary.png){.stretch}
 
       - title: Results
         content: |-
-          * The Clinical Image Research Registry (the CIRR) at RIH is established
-          * Why not use “modern ai”?   Around 3 cases/week — how long to get to 14M studies, like ImageNet?
+          ::::: condensed
+          * The Clinical Image Research Registry (CIRR) is established
+          * Why not use “modern ai”?
+          * Around 3 cases/week — how long to get to 14M studies, like ImageNet?
           * $n = 300$, $t = 1800$(5 years), $n/t = 0.17$
+          :::::
+        image: 20160718_111059_1468854774680.jpg
+        wide_image: true
 
   ## 3D Review
   - title: 3D Review
@@ -166,8 +180,8 @@ content:
           * Oculus
           * Hololens
           * The Brown “YURT”
-          * Phantom
-          * Range of 3D printing systems
+          * Haptic Phantom
+          * 3D Fabrication
         image: viper.jpg
         wide_image: true
 
@@ -175,17 +189,17 @@ content:
         content: |-
           * Is high resolution data available or has it been lost?
           * Workups are very specific and require significant anatomic and technical expertises
+        image: fetal_3d.jpg
 
       - title: Results
         content: |-
-          * Procedure pre-planning (AR/VR walk throughs)
-          * Virtual biopsy (hololens and phantom virtual biopsy)
-          * Teaching artifacts (spinabifida)
-          * Simulators (arterial selection)
+          * Procedure pre-planning
+          * Virtual biopsy
+          * Teaching artifacts
+          * Simulators
           * Some data is public
           * $n = 20$, $t = 1800$ (5 years), $n/t = 0.01$
-        image: fetal_3d.jpg
-        image_caption: Fetal spinabifada 3D printed model
+        image: IMG_4410.jpg
 
   ## MUSTACHE
   - title: MUSTACHE
@@ -212,7 +226,7 @@ content:
         content: |-
           * Hand made in Matlab
 
-          ![](images/steatosis600.png){.stretch}
+          ![](images/mustache_steatosis600.png){.stretch}
 
       - title: Results
         content: |-
@@ -221,7 +235,6 @@ content:
           * Data is public (or will be soon)
           * $n = 300$, $t = 120$ (4 months), $n/t = 2.5$
         image: 20150410_165706.jpg
-        im_caption: Wu winning an Xbox at the Brown undergrad research symposium
 
   ## Dose Review
   - title: Dose Review
@@ -250,8 +263,9 @@ content:
       - title: Results
         content: |-
           * Unable to reproduce ACR summary values, conclude that their values were improperly computed
-          * All dose data is routed to the CIRR for future review, DIANA, our DICOM analytics package is born
+          * All dose data is routed to the CIRR for future review, DIANA, our DICOM routing and analytics package is born
           * $n = 150$, $t = 7$ (1 week), $n/t = 21.42$
+        image: cirr_diagram_0.png
 
   ## ProTECT3D
   - title: ProTECT3D
@@ -262,6 +276,7 @@ content:
         content: |-
           * Wright, Lunny, L Merck, Keshava-Murthy, Pan
           * Study impact of TBI treatment
+        image: tbi_3d.png
 
       - title: Inputs
         content: |-
@@ -292,7 +307,7 @@ content:
         content: |-
           * Pan
           * Estimate skeletal developmental age from data, rather than using the classical model in Gruelich and Pyle
-        image: BoneAgeHeatMap.png
+        image: ba_heatmap.png
 
       - title: Results
         content: |-
@@ -300,12 +315,12 @@ content:
           * Using RIH data set: XX%
           * DIANA can do retrospective pulls
           * $n = 2000$, $t = 60$ (2 months), $n/t = 34.01$
-        image: IMG_4468.jpg
+        image: pan_ba_rsna.jpg
 
       - title: Considerations
         content: |-
           * This is a common task and a solved problem; so how do we put this back into the clinical pipeline?
-        image: rih3d-ba.png
+        image: ba_report.png
 
   - title: MamBx
     title_modifier: 2500 USBx/MRBx Studies with Path
@@ -320,6 +335,7 @@ content:
         content: |-
           * Doing this routinely now, >80% accuracy
           * $n = 2500$, $t = 90$ (3 months), $n/t = 28.3$
+        image: IMG_20170912_204727.jpg
 
   - title: MochiNet
     title_modifier: 17,000 CR Studies
@@ -357,7 +373,7 @@ content:
       - title: Results
         content: |-
           - Years in and still "in progress"
-          - Embedded DIANA is born
+          - Remote Embedded DIANA is born
 
   - title: Thyroid USBx
     title_modifier: 800 USBx Studies with Path, trial data
@@ -382,6 +398,14 @@ content:
           * Collins
           * Dose data, 2 years continuous real-time data collection, outlier detection
           * Despite ITs best efforts to destroy it
+        image: dose_monitoring.png
+
+      - title: Results
+        content: |-
+          * 60,000 studies indexed
+          * 200 outliers justified
+          * 20+ real time alerts issued
+        image: dose_outlier_alert.png
 
   - title: Report Priority
     title_modifier: 500,000 Reports

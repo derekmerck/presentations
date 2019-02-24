@@ -46,33 +46,27 @@ div.column {
   font-size: smaller;
   vertical-align: middle;
 }
-div.fig {
-  width: 100%;
-  height: 80%;
+div.condensed {
   font-size: smaller;
 }
-.reveal figure {
-  height: 100%;
-  width: 100%;
-}
-.reveal figure img {
-  max-height: 80%;
-  width: auto;
-}
-
 </style>
 </section>
-<section id="about-me" class="slide level3">
-<h3>About Me</h3>
+<section id="who-am-i" class="slide level3">
+<h3>Who Am I?</h3>
 <div class="columns">
 <div class="column" style="width:60%;">
 <ul>
-<li>some stuff about me</li>
-<li>some other stuff about me</li>
+<li>Lit Major at Reed</li>
+<li>Multimedia Programmer at CMD</li>
+<li>Technical Contractor</li>
+<li>Grad Student at UC and UNC</li>
+<li>Married to a clinical trialist</li>
+<li>Teaching Faculty at CLC and GPC</li>
+<li>Research Faculty at RIH Diagnostic Imaging, Radiation-Oncology, Brown Engineering, URI Physics, Tufts CTSI</li>
 </ul>
 </div><div class="column" style="width:40%;">
 <div class="fig">
-<p><img data-src="images/merck_3d_face_capture.jpg" /></p>
+<p><img data-src="images/mercks.png" /></p>
 </div>
 </div>
 </div>
@@ -86,6 +80,10 @@ div.fig {
 <li>The CIRR and DIANA</li>
 </ol>
 </section>
+<section id="project-complexity" class="slide level3">
+<h3>Project Complexity</h3>
+<p><a href="https://plot.ly/~derek_merck/7/?share_key=i9GSewCIDIaS2Bry96DwRb"><img data-src="https://plot.ly/~derek_merck/7.png?share_key=i9GSewCIDIaS2Bry96DwRb" alt="Project Complexity" /></a></p>
+</section>
 <section><section id="artp---36-ct-studies" class="title-slide slide level2"><h2>ARTP - 36 CT Studies</h2></section><section id="artp---overview" class="slide level3">
 <h3>ARTP - Overview</h3>
 <div class="columns">
@@ -94,7 +92,7 @@ div.fig {
 <p>Optimize treatment outcomes by adapting radiotherapy treatment to patient anatomic shape change</p>
 </div><div class="column" style="width:40%;">
 <div class="fig">
-<p><img data-src="images/pablo.png" /></p>
+<p><img data-src="images/pablo-mpelvis.png" /></p>
 </div>
 </div>
 </div>
@@ -106,18 +104,13 @@ div.fig {
 </ul>
 </section><section id="artp---techniques" class="slide level3">
 <h3>ARTP - Techniques</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
 <ul>
 <li>Image registration (rigid, deformable)</li>
 <li>Anatomic segmentation</li>
 <li>Volumetry and shape stats</li>
 <li>Surface and volume visualization</li>
-</ul>
-</section><section id="artp---tools" class="slide level3">
-<h3>ARTP - Tools</h3>
-<div class="columns">
-<div class="column" style="width:60%;">
-<ul>
-<li>Hand made in C++ and Matlab</li>
 </ul>
 </div><div class="column" style="width:40%;">
 <div class="fig">
@@ -125,58 +118,76 @@ div.fig {
 </div>
 </div>
 </div>
+</section><section id="artp---tools" class="slide level3">
+<h3>ARTP - Tools</h3>
+<ul>
+<li>Hand made in C</li>
+<li>Code base had a 13 year legacy</li>
+<li>I convinced them to let me work with C++</li>
+</ul>
 </section><section id="artp---considerations" class="slide level3">
 <h3>ARTP - Considerations</h3>
 <blockquote>
 <p>2005: “In the fullness of time, Dr. X will completely segment the anatomic structures in all 36 of these studies…”</p>
 </blockquote>
 <blockquote>
-<p>2009: “… although somewhat limited by the 6 segmented cases we have available…”</p>
+<p>2009: “…although somewhat limited by the 6 segmented cases we have available…”"</p>
 </blockquote>
 </section><section id="artp---results" class="slide level3">
 <h3>ARTP - Results</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
 <ul>
-<li>Methodological improvements</li>
+<li>Methodological improvements in anatomic representation</li>
 <li><span class="math inline"><em>n</em> = 36</span>, <span class="math inline"><em>t</em> = 700</span> (2 years), <span class="math inline"><em>n</em>/<em>t</em> = 0.05</span></li>
 </ul>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<p><img data-src="images/pablo-kidney.png" /></p>
+</div>
+</div>
+</div>
 </section></section>
 <section><section id="pmta---20-ct-studies" class="title-slide slide level2"><h2>PMTA - 20 CT Studies</h2></section><section id="pmta---overview" class="slide level3">
 <h3>PMTA - Overview</h3>
 <div class="columns">
-<div class="column" style="width:60%;">
+<div class="column" style="width:40%;">
 <ul>
 <li>Dupuy, Healey, Collins</li>
-<li>Compare anatomic models from before and after minimally invasive microwave thermal ablation cancer treatment to deduce likelihood of recurrence</li>
+<li>Compare anatomic models from before and after microwave thermal ablation cancer treatment to deduce likelihood of recurrence</li>
 </ul>
-</div><div class="column" style="width:40%;">
+</div><div class="column" style="width:60%;">
 <div class="fig">
-<p><img data-src="images/CTARN.png" /></p>
+<p><img data-src="images/IMG_2282.jpg" /></p>
 </div>
 </div>
 </div>
 </section><section id="pmta---inputs" class="slide level3">
 <h3>PMTA - Inputs</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
 <ul>
 <li>Started with about 20 cases</li>
 <li>Sub-optimal data collection</li>
 <li><em>Ad hoc</em> processing</li>
 </ul>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<p><img data-src="images/ablation_2sticks.png" /></p>
+</div>
+</div>
+</div>
 </section><section id="pmta---techniques" class="slide level3">
 <h3>PMTA - Techniques</h3>
+<div class="condensed">
 <ul>
 <li>Image registration (rigid, deformable)</li>
 <li>Anatomic segmentation</li>
 <li>Volumetry and shape stats</li>
 <li>Statistical classifiers</li>
 </ul>
-<img data-src="images/collins_metric.png" class="stretch" />
-</section><section id="pmta---tools" class="slide level3">
-<h3>PMTA - Tools</h3>
-<ul>
-<li>Hand made in C++, Matlab, Python</li>
-<li>Clinical tools like GE AWS and Terarecon</li>
-<li>3D Slicer (NAMIC)</li>
-</ul>
+</div>
+<img data-src="images/abl_metric.png" class="stretch" />
 </section><section id="pmta---considerations" class="slide level3">
 <h3>PMTA - Considerations</h3>
 <ul>
@@ -187,26 +198,31 @@ div.fig {
 </ul>
 </section><section id="pmta---results" class="slide level3">
 <h3>PMTA - Results</h3>
-<div class="columns">
-<div class="column" style="width:60%;">
+<div class="condensed">
 <ul>
 <li>Currently about 200 cases, consistent RT data collection and processing, works for multiple anatomic domains</li>
 <li><em>Very good</em> early predictive accuracy (&gt;90% 3-6 months before recurrence), novel</li>
-<li>Significant methodlogical improvements in biothermal modeling</li>
 </ul>
-</div><div class="column" style="width:40%;">
-<div class="fig">
-<p><img data-src="images/gd_defense.jpg" /></p>
 </div>
-</div>
-</div>
+<img data-src="images/abl_metric_summary.png" class="stretch" />
 </section><section id="pmta---results-1" class="slide level3">
 <h3>PMTA - Results</h3>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="condensed">
 <ul>
-<li>The Clinical Image Research Registry (the CIRR) at RIH is established</li>
-<li>Why not use “modern ai”? Around 3 cases/week — how long to get to 14M studies, like ImageNet?</li>
+<li>The Clinical Image Research Registry (CIRR) is established</li>
+<li>Why not use “modern ai”?</li>
+<li>Around 3 cases/week — how long to get to 14M studies, like ImageNet?</li>
 <li><span class="math inline"><em>n</em> = 300</span>, <span class="math inline"><em>t</em> = 1800</span>(5 years), <span class="math inline"><em>n</em>/<em>t</em> = 0.17</span></li>
 </ul>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="fig">
+<p><img data-src="images/20160718_111059_1468854774680.jpg" /></p>
+</div>
+</div>
+</div>
 </section></section>
 <section><section id="d-review---4-ct-and-mr-studies" class="title-slide slide level2"><h2>3D Review - 4 CT and MR Studies</h2></section><section id="d-review---overview" class="slide level3">
 <h3>3D Review - Overview</h3>
@@ -265,10 +281,18 @@ div.fig {
 </div>
 </section><section id="d-review---considerations" class="slide level3">
 <h3>3D Review - Considerations</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
 <ul>
 <li>Is high resolution data available or has it been lost?</li>
 <li>Workups are very specific and require significant anatomic and technical expertises</li>
 </ul>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<p><img data-src="images/fetal_3d.jpg" /></p>
+</div>
+</div>
+</div>
 </section><section id="d-review---results" class="slide level3">
 <h3>3D Review - Results</h3>
 <div class="columns">
@@ -283,7 +307,7 @@ div.fig {
 </ul>
 </div><div class="column" style="width:40%;">
 <div class="fig">
-<p><img data-src="images/fetal_3d.jpg" /></p>
+<p><img data-src="images/IMG_4410.jpg" /></p>
 </div>
 </div>
 </div>
@@ -318,7 +342,7 @@ div.fig {
 <ul>
 <li>Hand made in Matlab</li>
 </ul>
-<img data-src="images/steatosis600.png" class="stretch" />
+<img data-src="images/mustache_steatosis600.png" class="stretch" />
 </section><section id="mustache---results" class="slide level3">
 <h3>MUSTACHE - Results</h3>
 <div class="columns">
@@ -331,9 +355,7 @@ div.fig {
 </ul>
 </div><div class="column" style="width:40%;">
 <div class="fig">
-<figure>
-<img data-src="images/20150410_165706.jpg" alt="Wu winning an Xbox at the Brown undergrad research symposium" /><figcaption>Wu winning an Xbox at the Brown undergrad research symposium</figcaption>
-</figure>
+<p><img data-src="images/20150410_165706.jpg" /></p>
 </div>
 </div>
 </div>
@@ -363,18 +385,34 @@ div.fig {
 </ul>
 </section><section id="dose-review---results" class="slide level3">
 <h3>Dose Review - Results</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
 <ul>
 <li>Unable to reproduce ACR summary values, conclude that their values were improperly computed</li>
-<li>All dose data is routed to the CIRR for future review, DIANA, our DICOM analytics package is born</li>
+<li>All dose data is routed to the CIRR for future review, DIANA, our DICOM routing and analytics package is born</li>
 <li><span class="math inline"><em>n</em> = 150</span>, <span class="math inline"><em>t</em> = 7</span> (1 week), <span class="math inline"><em>n</em>/<em>t</em> = 21.42</span></li>
 </ul>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<p><img data-src="images/cirr_diagram_0.png" /></p>
+</div>
+</div>
+</div>
 </section></section>
 <section><section id="protect3d---2000-ctmr-studies-trial-data" class="title-slide slide level2"><h2>ProTECT3D - 2000 CT/MR Studies, trial data</h2></section><section id="protect3d---overview" class="slide level3">
 <h3>ProTECT3D - Overview</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
 <ul>
 <li>Wright, Lunny, L Merck, Keshava-Murthy, Pan</li>
 <li>Study impact of TBI treatment</li>
 </ul>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<p><img data-src="images/tbi_3d.png" /></p>
+</div>
+</div>
+</div>
 </section><section id="protect3d---inputs" class="slide level3">
 <h3>ProTECT3D - Inputs</h3>
 <ul>
@@ -422,7 +460,7 @@ div.fig {
 </ul>
 </div><div class="column" style="width:40%;">
 <div class="fig">
-<p><img data-src="images/BoneAgeHeatMap.png" /></p>
+<p><img data-src="images/ba_heatmap.png" /></p>
 </div>
 </div>
 </div>
@@ -438,7 +476,7 @@ div.fig {
 </ul>
 </div><div class="column" style="width:40%;">
 <div class="fig">
-<p><img data-src="images/IMG_4468.jpg" /></p>
+<p><img data-src="images/pan_ba_rsna.jpg" /></p>
 </div>
 </div>
 </div>
@@ -451,7 +489,7 @@ div.fig {
 </ul>
 </div><div class="column" style="width:40%;">
 <div class="fig">
-<p><img data-src="images/rih3d-ba.png" /></p>
+<p><img data-src="images/ba_report.png" /></p>
 </div>
 </div>
 </div>
@@ -464,10 +502,18 @@ div.fig {
 </ul>
 </section><section id="mambx---results" class="slide level3">
 <h3>MamBx - Results</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
 <ul>
 <li>Doing this routinely now, &gt;80% accuracy</li>
 <li><span class="math inline"><em>n</em> = 2500</span>, <span class="math inline"><em>t</em> = 90</span> (3 months), <span class="math inline"><em>n</em>/<em>t</em> = 28.3</span></li>
 </ul>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<p><img data-src="images/IMG_20170912_204727.jpg" /></p>
+</div>
+</div>
+</div>
 </section></section>
 <section><section id="mochinet---17000-cr-studies" class="title-slide slide level2"><h2>MochiNet - 17,000 CR Studies</h2></section><section id="mochinet---overview" class="slide level3">
 <h3>MochiNet - Overview</h3>
@@ -509,7 +555,7 @@ div.fig {
 <h3>SIREN - Results</h3>
 <ul>
 <li>Years in and still “in progress”</li>
-<li>Embedded DIANA is born</li>
+<li>Remote Embedded DIANA is born</li>
 </ul>
 </section></section>
 <section><section id="thyroid-usbx---800-usbx-studies-with-path-trial-data" class="title-slide slide level2"><h2>Thyroid USBx - 800 USBx Studies with Path, trial data</h2></section><section id="thyroid-usbx---overview" class="slide level3">
@@ -527,11 +573,34 @@ div.fig {
 </section></section>
 <section><section id="dose-monitoring---60000-sr-from-ct-xa-nm" class="title-slide slide level2"><h2>Dose Monitoring - 60,000 SR from CT, XA, NM</h2></section><section id="dose-monitoring---overview" class="slide level3">
 <h3>Dose Monitoring - Overview</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
 <ul>
 <li>Collins</li>
 <li>Dose data, 2 years continuous real-time data collection, outlier detection</li>
 <li>Despite ITs best efforts to destroy it</li>
 </ul>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<p><img data-src="images/dose_monitoring.png" /></p>
+</div>
+</div>
+</div>
+</section><section id="dose-monitoring---results" class="slide level3">
+<h3>Dose Monitoring - Results</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>60,000 studies indexed</li>
+<li>200 outliers justified</li>
+<li>20+ real time alerts issued</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="fig">
+<p><img data-src="images/dose_outlier_alert.png" /></p>
+</div>
+</div>
+</div>
 </section></section>
 <section><section id="report-priority---500000-reports" class="title-slide slide level2"><h2>Report Priority - 500,000 Reports</h2></section><section id="report-priority---overview" class="slide level3">
 <h3>Report Priority - Overview</h3>
@@ -566,10 +635,6 @@ div.fig {
 <li>We are back to <em>months</em> of data collection</li>
 </ul>
 </section></section>
-<section><section id="section" class="title-slide slide level2"><h2></h2></section><section id="project-complexity" class="slide level3">
-<h3>Project Complexity</h3>
-<p><a href="https://plot.ly/~derek_merck/7/?share_key=i9GSewCIDIaS2Bry96DwRb"><img data-src="https://plot.ly/~derek_merck/7.png?share_key=i9GSewCIDIaS2Bry96DwRb" alt="Project Complexity" /></a></p>
-</section></section>
     </div>
   </div>
 
@@ -583,14 +648,6 @@ div.fig {
       Reveal.initialize({
         // Push each slide change to the browser history
         history: true,
-        // Parallax background image
-        parallaxBackgroundImage: 'images/big_board_bglite.png', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
-        // Parallax background size
-        parallaxBackgroundSize: '5022px 2250px', // CSS syntax, e.g. "2100px 900px"
-        // Amount to move parallax background (horizontal and vertical) on slide change
-        // Number, e.g. 100
-        parallaxBackgroundHorizontal: 358.7142857142857,
-        parallaxBackgroundVertical: 225.0,
 
         // Optional reveal.js plugins
         dependencies: [

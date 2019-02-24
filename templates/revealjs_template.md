@@ -44,13 +44,6 @@
 author: {{ author }}
 title: {{ title }}
 date: {{ date }}
-
-{% if background.get("file") | default(None) %}
-parallaxBackgroundImage: images/{{ background.file[theme] | default(background.file) }}
-parallaxBackgroundSize: {{ background.im_size[0] }}px {{ background.im_size[1] }}px
-parallaxBackgroundHorizontal: {{ background.im_size[0] / (content | length) }}
-parallaxBackgroundVertical:  {{ background.im_size[1] / 10 }}
-{% endif %}
 ---
 
 <style>
@@ -58,29 +51,18 @@ div.column {
   font-size: smaller;
   vertical-align: middle;
 }
-div.fig {
-  width: 100%;
-  height: 80%;
+div.condensed {
   font-size: smaller;
 }
-.reveal figure {
-  height: 100%;
-  width: 100%;
-}
-.reveal figure img {
-  max-height: 80%;
-  width: auto;
-}
-
 </style>
 
 {{ render_slide(intro, level=3) }}
 
 {{ render_slide(agenda, level=3) }}
 
+{{ render_slide(overview, level=3) }}
+
 {% for item in content -%}
 {{ render_slide(item, level=2) }}
 {% endfor %}
 
-##
-{{ render_slide(follow_up, level=3) }}
