@@ -22,6 +22,8 @@ theme_maps = {
     "solarized": "light",
     "white":     "light",
     "simple":    "white",
+    "moon":      "dark",
+    "blood":     "dark",
     "night":     "dark",
     "black":     "dark"
 }

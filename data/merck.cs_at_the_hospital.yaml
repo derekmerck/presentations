@@ -7,6 +7,8 @@ background:
     solarized: big_board_bglite.png
     simple:    big_board_bglite.png
     white:     big_board_bglite.png
+    moon:      big_board_bgdark.png
+    blood:     big_board_bgdark.png
     black:     big_board_bgdark.png
     night:     big_board_bgdark.png
   im_size: [5022, 2250]
@@ -412,8 +414,3 @@ content:
         content: |-
           * DIANA 3wks in of 24x7 data processing: 125k studies = 5%
           * We are back to *months* of data collection
-
-
-
-
-
