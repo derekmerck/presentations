@@ -44,7 +44,7 @@
 author: {{ author }}
 title: {{ title }}
 date: {{ date }}
----
+...
 
 <style>
 div.column {
@@ -54,15 +54,15 @@ div.column {
 div.condensed {
   font-size: smaller;
 }
+.reveal strong {
+  color: khaki;
+}
+.reveal figcaption {
+  font-size: 50%;
+  color: white;
+}
 </style>
-
-{{ render_slide(intro, level=3) }}
-
-{{ render_slide(agenda, level=3) }}
-
-{{ render_slide(overview, level=3) }}
 
 {% for item in content -%}
 {{ render_slide(item, level=2) }}
 {% endfor %}
-
