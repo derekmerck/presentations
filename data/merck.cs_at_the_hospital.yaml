@@ -15,7 +15,8 @@ background:
   im_parallax: true
 
 
-content:
+children:
+
   - title: Introduction
     children:
 
@@ -67,7 +68,7 @@ content:
         * 12 patients undergoing fractionated radiotherapy for prostate cancer
         * Each imaged 3 times over the course of their treatment with **computed tomography** (CT)
         * Years of data collection
-        * Extqant IRB approvals
+        * Extant IRB approvals
         * **DICOM** and proprietary medical data formats
 
     - title: Techniques

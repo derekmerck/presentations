@@ -1,14 +1,21 @@
 from subprocess import call
+import logging
 
 p = "cs_at_the_hospital"
+# p = "rih3dlab_update_0519"
 
 jinjafy_binary = "/anaconda3/envs/jinjafy/bin/jinjafy"
 projects = {
 
     "cs_at_the_hospital": {
         "meta": "merck.cs_at_the_hospital.yaml",
-        "template": "revealjs_template.md",
-        "from": "md",
+        "template": "revealjs_2d",
+        "to": "revealjs"
+    },
+
+    "rih3dlab_update_0519": {
+        "meta": "merck.rih3dlab_update.0519.yaml",
+        "template": "revealjs_2d",
         "to": "revealjs"
     }
 
@@ -18,27 +25,35 @@ extensions = {
     "revealjs": "html"
 }
 
-theme_maps = {
-    "solarized": "light",
-    "white":     "light",
-    "simple":    "white",
-    "moon":      "dark",
-    "blood":     "dark",
-    "night":     "dark",
-    "black":     "dark"
-}
+themes = ["light",
+    "dark",
+    "black",
+    "white",
+    "league",
+    "beige",
+    "sky",
+    "night",
+    "serif",
+    "solarized",
+    "moon",
+    "blood",
+    "moon"
+]
 
 config = projects[p]
 
-jargs = ["templates/{}".format(config["template"]),
+jargs = [config["template"],
         "data/{}".format(config["meta"]),
-        "-f", config["from"],
         "-t", config["to"] ]
 
-for theme, theme_map in theme_maps.items():
+# logging.basicConfig(level=logging.DEBUG)
+
+for theme in themes:
 
     out_file = "{}-{}.{}".format(p, theme, extensions[config["to"]])
     jjargs = ["-o", "docs/{}-{}.{}".format(p, theme, extensions[config["to"]]),
               "--theme", theme]
+
+    # logging.debug([*jargs, *jjargs])
 
     call([jinjafy_binary, *jargs, *jjargs])

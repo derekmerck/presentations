@@ -1,0 +1,154 @@
+---
+author: Derek Merck, PhD
+date: May 14, 2019
+title: 3D Lab Uppdate
+
+background:
+  file:
+    solarized: big_board_bglite.png
+    simple:    big_board_bglite.png
+    white:     big_board_bglite.png
+    moon:      big_board_bgdark.png
+    blood:     big_board_bgdark.png
+    black:     big_board_bgdark.png
+    night:     big_board_bgdark.png
+  im_size: [5022, 2250]
+  im_parallax: true
+
+
+children:
+  - title: Front Matter
+    children:
+
+      - title: Who Am I?
+        content: |-
+          * Lit Major at Reed
+          * Multimedia Programmer at CMD
+          * Technical Contractor
+          * Grad Student at UC and UNC
+          * Married to a clinical trialist
+          * Teaching Faculty at CLC and GPC
+          * Research Faculty at RIH Diagnostic Imaging, Radiation-Oncology, Brown Engineering, URI Physics, Tufts CTSI
+          * Joining Shands Hospital at University of Florida, Gainesville, in summer 2019
+        image: mercks.png
+        im_caption: derek_merck@brown.edu
+
+
+      - title: Agenda
+        content: |-
+          1. 3D Lab Ledger
+          2. Radiology AI Research
+          3. IGP Research
+          4. Informatics Research
+          5. The Future
+
+  - title: 3D Lab Ledger
+    children:
+
+      - title: 2018-2019 Proposals and Awards
+        content: |-
+          * ...
+
+      - title: 2018-2019 Presentations
+        content: |-
+          * ...
+
+      - title: 2018-2019 Publications
+        content: |-
+          * @panGeneralizableInterInstitutionalClassification2019
+
+      - title: 2018-2019 Students and RAs
+        content: |-
+          * Ian Pan (AMS)
+          * Tyler Harder (AMS)
+          * Andrew Chang (AMS)
+          * Thomas Yi (AMS)
+          * Lawrence Huang (Brown)
+          * Owen Leary (RIH Neurosurgery)
+          * Yuhao Zhang (Stanford)
+
+      - title: 2013-2019 Aggregate Stats
+        content: |-
+          * Award programs proposed: XX for $YY
+          * Award programs approved: XX for $YY
+          * Regional/national/international presentations: XX
+          * Local symposia presentations: XX
+          * Published manuscripts: XX
+          * Students and RA's hosted: XX
+          * PhDs completed: 1.5
+
+  - title: Radiology AI Research
+
+    children:
+
+      - title: Body U/S (Beland)
+        content: |-
+          * "Virtual pathology" from U/S bx
+          * Thyroid, Liver, Prostate
+          * Detection and grade classification
+          * Working with Lifespan, RIMI, Wash U, Parkland
+
+      - title: Mamography (Lourenco)
+        content: |-
+          * Also "Virtual pathology" from U/S and MR bx
+          * Detection and precise pathological classification
+
+      - title: Neuro CT (L Merck)
+        content: |-
+          * Automating clinical trial enrollment and analytics from CT
+          * Detection and segmentation
+          * Working with Lifespan, Hopkins TIC, Tufts CTSI, SIREN network
+          * Inexpensive on-site data collection and inference
+
+      - title: Automatic Reporting for Radiography (Movson, Swenson, Langlotz)
+        content: |-
+          * Priority classification and impression generation from x-ray imaging
+          * Working with Stanford
+
+
+  - title: Image Guided Research
+
+    children:
+
+      - title: Minimally Invasive Treatment Planning (Healey, Ianicculli, Dubel)
+      - content: |-
+          * ...
+
+      - title: 3D Printing for IR Training (Ahn, Soares, Dubel)
+      - content: |-
+          * ...
+
+      - title: A/R for IR Training (Kobayashi, Fridley)
+      - content: |-
+          * ...
+
+  - title: Informatics and Viz Research
+
+    children:
+
+      - title: CT Dose Monitoring (Collins)r
+      - content: |-
+          - 60,000+ CT, NM, and XA dose reports collected and aggregated
+          - 200+ outliers identified and justified
+          - 5 real-time alerts
+
+      - title: Non-contact Vitals Monitoring (Kobayashi, Capraro)
+        content: |-
+          * Philips partnership
+          * Recently: drone-based vitals sign collection
+
+      - title: Cellular 3D Microscopy for Toxicology (Boeklehyde, Morgan)
+        content: |-
+          * ...
+
+  - title:  The Future
+
+    children:
+
+      - title: Where Next
+        content: |-
+          * I am keeping RIH credentials as long as possible
+          * Many ongoing projects
+          * Lots of students and RAs still working
+          * Space, equipment, and services that need maintained
+
