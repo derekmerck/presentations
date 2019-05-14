@@ -1,8 +1,8 @@
 from subprocess import call
 import logging
 
-p = "cs_at_the_hospital"
-# p = "rih3dlab_update_0519"
+# p = "cs_at_the_hospital"
+p = "rih3dlab_update_0519"
 
 jinjafy_binary = "/anaconda3/envs/jinjafy/bin/jinjafy"
 projects = {
@@ -48,6 +48,7 @@ jargs = [config["template"],
 
 # logging.basicConfig(level=logging.DEBUG)
 
+# for theme in ["moon", "solarized"]:
 for theme in themes:
 
     out_file = "{}-{}.{}".format(p, theme, extensions[config["to"]])
