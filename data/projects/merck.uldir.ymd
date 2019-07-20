@@ -1,0 +1,83 @@
+---
+title:      Ultra-low Dose Image Restoration with AI
+short:      ULDIR
+authors:    [Derek, Grand, Fang, Karen, Scott]
+people:
+  Grand:
+    name: David Grand
+    credential: MD
+    institution: Rhode Island Hospital
+    
+  Fang:
+    name: Ruogu Fang
+    credential: PhD
+    institution: University of Florida
+    
+  Karen:
+    name: Karen Laurie
+    credential: RT(R)(CT)
+    position: CT and MRI Service Manager
+    affiliation: The Miriam Hospital
+
+date:       May 29, 2019
+irb status: in submission
+risk:       no-risk-retrospective
+deidentified: true
+keywords:
+  - Image Restoration
+  - Machine Learning
+  - Computed Tomography
+
+data:
+  N_ULDRS_STUDIES: 48
+  ULDRS_START: October 27, 2017
+  ULDRS_END: May 29, 2019
+  N_RRS_STUDIES_YR: 661
+  ULDRS_IRB_ID: XXX
+
+...
+
+Background
+================
+
+Image denoising and restoration is an area of interest in machine learning and computer vision.  Machine learning approaches for removing noise such as speckles and scratching from natural images have been proposed and even pointed the way to applying this technology in the medical domain [@lehtinenNoise2NoiseLearningImage2018].  
+
+However, an important impact of image restoration in medical imaging is not just improving image interpretability, but in in _reducing the required radiation exposure to create interpretable studies_.  Radiation dose and image quality are intrinsically related: reduced exposure almost always leads to reduced image quality.
+
+In this program, we propose to explore how machine learning can improve the interpretability of extremely low dose / high noise medical imaging.  
+
+We will use machine learning methods to restore high-resolution and high-quality renal CT images from paired ultra-low dose and routine imaging studies. We will use a suite of machine learning algorithms to train on the normally collected images and apply the learned model to restore quality in the ultra-low dose renal images.
+
+The ultra-low dose, routine, and restored images will be evaluated both objectively by computational metrics and compared visually by clinicians with respect to a renal stone assessment task.  We expect to show that machine learning based image restoration of low radiation imaging will be as interpretable as the routinely collected studies.
+
+Approach
+===============
+
+Data Collection
+---------------
+
+Dr. Grand and Ms. Laurie have implemented a serial multi-dose CT imaging protocol for renal stone screening at the Miriam Hospital as a separately approved research program {{ data.ULDRS_IRB_ID }}.  Each subject is imaged using a protocol (IMG8285) that includes both an ultra-low dose and routine study simultaneously.  {{data.N_ULDRS_STUDIES}} subject image pairs have been collected, deidentified, and assessed for renal stones under this protocol.  All patients were consented and enrolled between {{ data.ULDRS_START }} and {{ data.ULDRS_END }} per the IRB approved protocol.
+
+This existing research data set will be repurposed for the proposed program.  No new data not collected as part of {{ data.ULDRS_IRB_ID }} will be used.
+
+
+Analysis
+---------------
+
+. . >> add some detail?
+
+
+Preliminary Work
+---------------
+
+Preliminary work at Lifespan includes curating our unique dataset of ultra-low-dose and routine renal study pairs.
+
+Our collaborator, Dr. Fang at University of Florida, been working on dose reduction in CT imaging including non-contrast CT, CTA angiography, and especially CT perfusion (CTP) in the past 10 year. She has has successfully applied the proposed image restoration methods with particular focus on enhancing low-dose CT perfusion scans [@fangTissuespecificSparseDeconvolution2015; @fangTENDERTensorNonlocal2017].
+
+
+Expected Results
+===================
+
+Given our group's experience with medical imaging AI, we believe that we will be able to achieve the same (or better) renal stone assessment accuracy using restored ultra-low-dose studies as we get using routine renal stone studies.
+
+Since routine renal stone studies (IMG1036) are fairly common ({{data.N_RRS_STUDIES_YR}} performed yearly at Lifespan), reducing radiation dose for this protocol could potentially result in a substantial reduction in overall patient radiation exposure from medical imaging.  Moreover, if successful, the described image restoration method could be applied to create reduced dose versions of multiple other common CT protocols.

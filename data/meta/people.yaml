@@ -1,0 +1,120 @@
+
+---
+people:
+
+  Derek:
+    name: Derek Merck
+    credential: PhD
+    email: derek_merck@brown.edu
+    position: Medical Imaging and Data Scientist
+    affiliation: Rhode Island Hospital
+    blurb: >-
+     Dr. Merck has a decade of experience in medical image analysis and informatics.
+
+  Lisa:
+    name: Lisa H. Merck
+    credential: MD, MPH
+    position: Emergency Physician and Clinical Trialist
+    email: lisa_merck@brown.edu
+    affiliation: Rhode Island Hospital
+
+  Scott:
+    name: Scott Collins
+    position: Lead CT and 3D Technologist
+    credential: RT(R)(CT)
+    email: scollins1@lifespan.org
+    affiliation: Rhode Island Hospital
+    blurb: >-
+     Mr. Collins' supervises utilization of 6 CT scanners at Rhode Island Hospital, which
+     collectively produce nearly 200 diagnostic and intra-procedure scans per day.  He is
+     listed as a co-author on 30 publications and abstracts with Lifepan researchers.  His
+     imaging protocols are in use across Lifespan and multiple other institutions across
+     Rhode Island and Massachusetts.
+
+  Ian:
+    name: Ian Pan
+    credential: MA
+    email: ian_pan@brown.edu
+    affiliation: Brown School of Medicine
+
+  Krishna:
+    name: Krishna Nand Keshavamurthy
+    credential: MS
+    affiliation: Brown School of Engineering/Memorial Sloan Kettering Cancer Center
+    email: krishna_nand_keshava_murthy@brown.edu
+
+  Owen:
+    name: Owen Leary
+    affiliation: Rhode Island Hospital/Brown School of Medicine
+    email: owen_leary@brown.edu
+
+  Tyler:
+    name: Tyler Harder
+    affiliation: Rhode Island Hospital
+    email: tyler_harder@brown.edu
+
+  Swenson:
+    name: David Swenson
+    credential: MD
+    affiliation: Rhode Island Hospital
+    email: dswenson@lifespan.org
+
+  Beland:
+    name: Michael Beland
+    credential: MD
+    affiliation: Rhode Island Hospital
+    email: mbeland@lifespan.org
+
+  Healey:
+    name: Terrance Healey
+    credential: MD
+    affiliation: Rhode Island Hospital
+    email: thealey@lifespan.org
+    blurb: >-
+      Dr. Healey is the Director of the Lung Tumor Ablation Service at Rhode Island Hospital.
+
+  Movson:
+    name: Jonathan Movson
+    credential: MD
+    affiliation: Rhode Island Hospital
+    email: jmovson@lifespan.org
+    position: Radiologist and Informatics Researcher
+
+  Lourenco:
+    name: Ana Lourenco
+    credential: MD
+    affiliation: Rhode Island Hospital
+
+  Cronan:
+    name: John Cronan
+    credential: MD
+    affiliation: Rhode Island Hospital
+    email: jcronan@lifespan,org
+    position: Professor and Chair of Diagnostic Imaging
+
+  Gokaslan:
+    name: Ziya Gokaslan
+    credential: MD
+    affiliation: Rhode Island Hospital
+    email: ziya.gokaslan@lifespan.org
+    position: Professor and Chair of Neurosurgery
+
+  Resnick:
+    name: Murray Resnick
+    credential: MD
+    affiliation: Rhode Island Hospital
+    email: mresnick@lifespan.org
+    position: Chief of Surgical Pathology
+
+  Karn:
+    name: Andrew Karn
+    affiliation: Rhode Island Hospital
+    email: akarn@lifespan.org
+    position: Information Systems Integration Specialist
+
+  Linakis:
+    name: James Linakis
+    credential: MD, PhD
+    affiliation: Rhode Island Hospital
+    position: Emergency Physician and Chair of the RIH IRB
+...
